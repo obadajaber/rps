@@ -97,3 +97,28 @@ dot2.addEventListener("click", function(){
 currentSlide = 2;
 moveSlider();
 });
+
+function getComputerChoice(){
+    let randomNumber = Math.floor(Math.random() * 3);
+    return choices[randomNumber];
+}
+
+function checkWinner(playerChoice, computerChoice){
+    if (playerChoice === computerChoice){
+        return "tie";
+    }
+
+    if (playerChoice === "rock" && computerChoice === "scissors"){
+        return "player";
+    }
+
+    if (playerChoice === "paper" && computerChoice === "rock"){
+        return "player";
+    }
+
+    if (playerChoice === "scissors" && computerChoice === "paper"){
+        return "player";
+    }
+return "computer";
+}
+
