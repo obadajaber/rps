@@ -29,3 +29,29 @@ let modalSup = document.getElementById("modal-sup")
 let modalPlayerScore = document.getElementById("modal-player-score")
 let modalComputerScore = document.getElementById("modal-computer-score")
 let playAgainBtn = document.getElementById("play-again-btn");
+
+let currentSlide = 0;
+let playerScore = 0;
+let computercore = 0;
+let roundNumber = 1;
+
+let choices = ["rock", "paper", "scissors"];
+
+let images = {
+    rock: "rock.png",
+    paper: "paper.png",
+    scissors: "scissors.png"
+};
+
+function updateDots() {
+    dot0.classList.remove("active");
+    dot1.classList.remove("active");
+    dot2.classList.remove("active");
+    if (currentSlide === 0) {
+        dot0.classList.add("active");
+    } else if (currentSlide === 1) {
+        dot1.classList.add("active");
+    } else {
+        dot2.classList.add("active");
+    }
+}
