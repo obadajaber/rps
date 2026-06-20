@@ -55,3 +55,45 @@ function updateDots() {
         dot2.classList.add("active");
     }
 }
+
+function moveSlider(){
+if (currentSlide === 0){
+    sliderTrack.style.transform = "translateX(0%)";
+}else if (currentSlide === 1){
+    sliderTrack.style.transform = "translateX(-33.33%)";
+}else if (currentSlide === 2){
+    sliderTrack.style.transform = "translateX(-66.66%)";
+}
+updateDots();
+}
+
+nextBtn.addEventListener("click", function (){
+currentSlide++;
+if(currentSlide > 2){
+    currentSlide = 0;
+}
+moveSlider();
+});
+
+prevBtn.addEventListener("click",function(){
+currentSlide--;
+if(currentSlide < 0){
+    currentSlide = 2;
+}
+moveSlider();
+});
+
+dot0.addEventListener("click", function(){
+currentSlide = 0;
+moveSlider();
+});
+
+dot1.addEventListener("click", function(){
+    currentSlide = 1;
+    moveSlider();
+});
+
+dot2.addEventListener("click", function(){
+currentSlide = 2;
+moveSlider();
+});
