@@ -22,3 +22,10 @@ let computerBattleImg = document.getElementById("computer-battle-img");
 let playerPlaceholder = document.getElementById("player-placeholder")
 let computerPlaceholder = document.getElementById("computer-placeholder");
 
+let modalBackdrop = document.getElementById("modal-backdrop")
+let modalIcon = document.getElementById("modal-icon")
+let modalTitle = document.getElementById("modal-title")
+let modalSup = document.getElementById("modal-sup")
+let modalPlayerScore = document.getElementById("modal-player-score")
+let modalComputerScore = document.getElementById("modal-computer-score")
+let playAgainBtn = document.getElementById("play-again-btn");
