@@ -122,3 +122,19 @@ function checkWinner(playerChoice, computerChoice){
 return "computer";
 }
 
+function showBattleImages(playerChoice, computerChoice){
+    playerBattleImg.src = images[playerChoice];
+    computerBattleImg.src = images[computerChoice];
+
+    playerBattleImg.alt = playerChoice;
+    computerBattleImg.alt = computerChoice;
+
+    playerBattleImg.classList.remove("hidden");
+    computerBattleImg.classList.remove("hidden");
+
+    playerBattleImg.classList.add("show");
+    computerBattleImg.classList.add("show");
+
+    playerBattleImg.classList.add("hidden");
+    computerBattleImg.classList.add("hidden");
+}
